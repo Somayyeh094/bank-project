@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "B Yekan";
+  src: url("fonts/BYekan.woff") format("woff"),
+    url("fonts/BYekan.woff2") format("woff2");
+}
+* {
+  font-family: "B Yekan", sans-serif;
+}
