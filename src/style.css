@@ -64,10 +64,10 @@ nav {
 .nav__link {
   margin-left: 100px;
   text-decoration: none;
+  padding: 10px 0;
 }
-.nav__link:last-child {
+.nav__btn {
   background-color: var(--color-primary);
-  padding: 5px 12px;
   border-radius: 20px;
   margin-left: 20px;
 }
@@ -82,8 +82,25 @@ nav {
 .header__heading--text h1 {
   margin-bottom: 20px;
 }
+.highlight {
+  position: relative;
+  z-index: 1;
+}
+.highlight::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -5px;
+  right: -5px;
+  background-image: var(--gradient-primary);
+  transform: skew(-15deg);
+  z-index: -1;
+}
+
 .header__heading--text01 {
-  padding-right: 130px;
+  display: inline-block;
+  margin-right: 130px;
 }
 .header__heading--text02 {
   margin-bottom: 20px;
@@ -101,6 +118,10 @@ section {
   margin: 100px auto;
   width: 90%;
   border-top: 1px solid #ddd;
+}
+.section__hidden {
+  display: none;
+  transform: translateY(8rem);
 }
 .section__heading {
   margin: 100px 80px;
