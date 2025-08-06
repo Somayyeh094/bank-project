@@ -5,7 +5,14 @@ const nav = document.querySelector("nav");
 const header = document.querySelector("header");
 const sections = document.querySelectorAll(".section");
 const tabContainer = document.querySelector(".operations__tab-container");
-console.log(tabContainer);
+const faNumber = document.querySelector(".fa-number");
+
+////////////////////////////////////////////Covert number to farsi/////////////////////////////////////////////
+function convertToPersianDigits(input) {
+  const persianDigits = ["۰", "۱", "۲", "۳", "۴", "۵", "۶", "۷", "۸", "۹"];
+  return input.toString().replace(/\d/g, (match) => persianDigits[match]);
+}
+faNumber.textContent = convertToPersianDigits(faNumber.textContent);
 //////////////////scroll to section-1//////////////////////////////////////////////////////////////////////////
 linkScrollto.addEventListener("click", function (e) {
   e.preventDefault();
